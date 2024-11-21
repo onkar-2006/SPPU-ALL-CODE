@@ -1,0 +1,67 @@
+U=[]
+total = int(input("enter the total number fo the student in the class:"))
+for i in range(0,total):
+    x=int(input("enter the roll no of the student:"))
+    U.append(x)
+print(U)
+
+cricket=[]
+a= int(input("enter the total number play cricket:"))
+for i in range(0,a):
+    b=int(input("enter the roll no of the student:"))
+    cricket.append(b)
+print(cricket)
+
+badminton=[]
+c= int(input("enter the total number play badminton:"))
+for i in range(0,c):
+    d=int(input("enter the roll no of the student:"))
+    badminton.append(d)
+print(badminton)
+
+football=[]
+e= int(input("enter the total number play football:"))
+for i in range(0,e):
+    f=int(input("enter the roll no of the student:"))
+    football.append(f)
+print(football)
+
+both_cri_and_bad=[]
+def both_cri_and_badminton():
+    for i in range(0,a):
+       for j in range(0,c):
+           if(cricket[i]==badminton[j]):
+              both_cri_and_bad.append(badminton[j])
+both_cri_and_badminton()
+print(both_cri_and_bad)
+
+both_cri_and_foot=[]
+def both_cri_and_football():
+    for i in range(0,a):
+        for j in range(0,e):
+            if(cricket[i]==football[j]):
+                both_cri_and_foot.append(football[j])
+both_cri_and_football()
+print(both_cri_and_foot)
+
+Either_cri_and_bad=[]
+def either_cri_and_bad():
+    for i in badminton:
+        if i not in cricket:
+            Either_cri_and_bad.append(i)
+    for i in cricket:
+        if i not in badminton:
+             Either_cri_and_bad.append(i)
+either_cri_and_bad()
+print(Either_cri_and_bad)
+
+
+nither_cri_and_bad=[]
+def nither_cri_and_badminton():
+    for i in football:
+        if i not in cricket and i not in badminton:
+            nither_cri_and_bad.append(i)
+nither_cri_and_badminton()
+print(nither_cri_and_bad)
+            
+    
