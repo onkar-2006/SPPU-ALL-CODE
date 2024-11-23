@@ -1,0 +1,202 @@
+//code 1
+/*
+#include<iostream>
+using namespace std ;
+int main(){
+    int x ;
+    try{
+        throw 100;
+
+    }catch(int x){
+        cout<<"an explection at "<<x;
+    }
+    return 0;
+}*/
+//code2 
+/*
+#include<iostream>
+using namespace std ;
+int main()
+{
+    double i , j;
+    void devide(double ,double);
+    cout<<"enter the deno"<<endl;
+    cin>>i;
+    cout<<"enter the num"<<endl;
+    cin>>j;
+    devide(i ,j);
+}
+void devide(double a ,double b)
+{
+    try{
+        if(b==0){
+            throw b;
+        cout<<"the result of a/b"<<a/b<<endl;
+        }
+    }catch(double b)
+    {
+        cout<<"cant not devide"<<endl;
+    }
+}
+
+#include<iostream>
+using namespace std ;
+int main(){
+    try{
+        int choice ;
+        cout<<"enter the 1 for the int and 3 for the double";
+        cin>>choice;
+        
+        if(choice==1){
+            throw 43 ;
+        }
+        else if (choice==2){
+            throw (3.14);
+        }
+        else{
+            cout<<"the invalid exepetion";
+        }
+    }catch(int e){
+        cout<<"the expertion is for the int"<<endl;
+     catch(float e){
+         cout<<"the expertion for the float is caught"<<endl;
+     }catch(...){
+         cout<<"the invalid exeption";
+     }
+    }
+}
+
+#include<iostream>
+using namespace std ;
+void fuction(){
+    
+        try
+        {
+            throw "myworld";
+        }
+        catch(char*){
+            cout<<"inside the catch of the m fuction()";
+            throw;
+        }
+    }
+int main(){
+    try
+    {
+        fuction();
+    }
+    catch(char*){
+        cout<<"inside the catch stament of main"
+    } return 0;
+}
+#include<iostream>
+using naespace std;
+void my_fuction(){
+    try
+    {
+        int val;
+        if(val<0.0)
+            throw "negative"
+        else
+        cout<<"the sqrt of the val is"<<sqrt(val)<<endl;
+        }catch(char*str)
+        {
+            cout<<"cannot handle"<<str<<"number"<<endl;
+        }
+    }
+int main(){
+    int num;
+    cout<<"enter the num";
+    cin>>num;
+    my_fuction(num);
+    return 0;
+}*/
+/*
+#include<iostream>
+using namespace std ;
+template<class T>
+T min(int a ,int b){
+    if(a<b)
+    return a;
+    else{
+        return b;
+    }
+}
+int main(){
+    cout<<"min(10,20)"  <<min(10,20)<<endl;
+    cout<<"min('p','t')"  <<min('p','t')<<endl;
+}
+*/
+#include<iostream>
+using namespace std;
+template<class T>
+void display(T x){
+    cout<<x<<endl;
+}
+void display(int a){
+    cout<<"inside the non template fuction"<<endl;
+}
+int main()
+{
+    cout<<"display string"<<endl;
+    display("heloo");
+    cout<<"display interger"<<endl;;
+    display(34);
+}
+#include<iostream>
+using namespace std;
+template<class T>
+T min(T a[10])
+{
+    T min;
+    min=a[10];
+    for(int i = 0 ;i<5;i=+){
+        if a[i]<min;
+        {
+            min=a[i];
+        }
+    }return min
+}
+#include<iostream>
+using namespace std ;
+template<class T>
+void display(T*list ,T key , Tcount)
+{
+    int flag =0;
+    for(int i=0;i<n;i++){
+        if(key==list[i]){
+            flag=1
+        }
+    }
+    if(flag==1){
+        cout<<"the element is present"
+    }else{
+        cout<<"the eleement is absent"<<
+    }
+}
+int main()
+{
+    int a[5]={3,4,5,66}
+    cout<<"searching the element"
+    display(a,100,5)
+}
+
+#include<iostream>
+using namespace std;
+template<class T>
+class sumclass{
+    T,a,b;
+    
+    public:
+    sumclass(T first,T second){
+        a=first ;
+        b=second;
+    }
+    T addition();
+};
+template<class T>
+T sumclass<t>::addition()
+{
+    T retraval ;
+    retraval=a+b;
+    return retraval;
+}
